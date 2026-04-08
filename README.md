@@ -14,3 +14,6 @@ A robot bases on Castorice from "Honkai:StarRail"
 哪位大佬能把她接入QQ或者WeChat…猪脑过载写不过来了…[哭]
 
 可能会有些AI痕迹，但我也是没招了（失恋之后喝断片时写的，自己也不知道自己写了什么只能扔给AI吔屎了）
+### 开源协议
+GPL-3.0-or-later，随便造，只要别商用就行（毕竟是我失恋的心血[唐笑]）
+
