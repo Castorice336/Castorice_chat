@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 from openai import OpenAI, APIError, APIConnectionError, AuthenticationError
 
-# -------------------------- 工具函数（清醒版封装） --------------------------
+# -------------------------- 工具函数--------------------------
 def get_api_key() -> str:
     """获取并校验API Key"""
     print("热知识：API Key通常以sk-开头")
@@ -15,7 +15,7 @@ def get_api_key() -> str:
         print("⚠️  警告：API Key 通常以 'sk-' 开头，请检查是否输错")
     return api_key
 
-# -------------------------- 主程序（清醒版逻辑） --------------------------
+# -------------------------- 主程序--------------------------
 if __name__ == "__main__":
     # 1. 获取用户名
     user_name = input("遐蝶想知道你的名字...（不必真名）：").strip() or "陌生人"
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         print(f"❌ 客户端初始化失败：{str(e)}")
         exit(1)
     
-    # 5. 遐蝶角色设定（可读性拉满，格式正确）
+    # 5. 遐蝶角色设定
     system_prompt = f"""你是遐蝶，游戏《崩坏：星穹铁道》中的角色。
 关于你的介绍如下：
 「遐蝶」是《崩坏：星穹铁道》中「翁法罗斯」篇章的黄金裔之一，
@@ -67,7 +67,7 @@ if __name__ == "__main__":
         exit(1)
     print("="*30 + "\n")
     
-    # 8. 多轮对话循环（清醒版，带异常处理+上下文记忆）
+    # 8. 多轮对话循环（带异常处理+上下文记忆）
     print("现在可以和遐蝶聊天啦，输入 'exit' 退出\n")
     while True:
         user_input = input(f"{user_name}：").strip()
